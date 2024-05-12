@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+
+<script>
+    // JSON data representing the collection of books
+    var booksData = {
+        "books": [
+            {
+                "title": "The Great Gatsby",
+                "author": "F. Scott Fitzgerald",
+                "publicationYear": 1925,
+                "genres": ["Fiction", "Classics"]
+            },
+            {
+                "title": "To Kill a Mockingbird",
+                "author": "Harper Lee",
+                "publicationYear": 1960,
+                "genres": ["Fiction", "Coming-of-Age"]
+            }
+        ]
+    };
+
+    // Displaying the title of the first book
+    console.log("Title of the first book: " + booksData.books[0].title);
+
+    // Displaying the author of the second book
+    console.log("Author of the second book: " + booksData.books[1].author);
+
+    // Displaying the genres of all books
+    var allGenres = [];
+    for (var i = 0; i < booksData.books.length; i++) {
+        allGenres = allGenres.concat(booksData.books[i].genres);
+    }
+    console.log("Genres of all books: " + allGenres.join(", "));
+</script>
+
+</body>
+</html>
